@@ -1,21 +1,41 @@
-import React from 'react'
+import React from 'react';
 
-const buttonStyle = {
-  padding: '10px 20px'
-};
+import { mdiArrowRight, mdiPlus } from '@mdi/js';
+import Icon from '@mdi/react';
 
-const Button = (props) => {
+export default function Button({
+  disabled,
+  onClick,
+  selected,
+  value,
+  type,
+  iconPosition = 'right',
+  className = 'wizard-element-button',
+}) {
+  const iconType = (buttonType) => {
+    switch (buttonType) {
+      case 'button-follow':
+        return <Icon className="icon-arrow-right" path={mdiArrowRight} />;
+      case 'add':
+        return <Icon className="icon-add" path={mdiPlus} />;
+      default:
+        return '';
+    }
+  };
+
   return (
-    <button
-    className="btn btn-default"
-    style={buttonStyle}
-    onClick={props.handleClick}>{props.label}</button>
-  )
+    <button disabled={disabled} className={className + (selected ? ' selected' : '')} onClick={onClick}>
+      {iconPosition === 'right' ? (
+        <>
+          {value}
+          {iconType(type)}
+        </>
+      ) : (
+        <>
+          {iconType(type)}
+          {value}
+        </>
+      )}
+    </button>
+  );
 }
-
-Button.defaultProps = {
-    onClick: () => {},
-    label: ''
-};
-
-export default Button;

@@ -1,0 +1,27 @@
+{
+  "printWidth": 128,
+  "trailingComma": "es5",
+  "eslintIntegration": true,
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": [".prettierrc", ".eslintrc"],
+      "options": {
+        "parser": "json"
+      }
+    },
+    {
+      "files": ["*.md"],
+      "options": {
+        "proseWrap": "always"
+      }
+    },
+    {
+      "files": ["*.js", "*.jsx", "*.json"],
+      "options": {
+        "arrowParens": "always"
+      }
+    }
+  ],
+  "cssEnable": ["css", "sass"]
+}
