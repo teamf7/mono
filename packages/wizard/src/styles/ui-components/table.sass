@@ -1,0 +1,122 @@
+.table-wrapper
+  border: 1px solid #eeeeee
+  padding-bottom: 10px
+  border-radius: 5px
+
+.table-wrapper-approval
+  padding: 20px
+
+.table
+  width: 100%
+  border-collapse: collapse
+
+.table__row
+  border-bottom: 1px solid #EEEEEE
+
+  .table__cell
+    padding: 10px 5px
+    vertical-align: top
+    word-wrap: break-word
+
+.table-other-approver
+  .table__cell
+    &:first-child
+      width: 100%
+
+    &:nth-child(even)
+      background-color: #fcfcfc
+
+    &:last-child
+      width: 30px
+
+  .table__cell_head
+    min-width: 300px
+    &:first-child
+      color: #333333
+      font-size: 12px
+      font-weight: 300
+
+.table__cell_head
+  text-align: left
+  font-weight: normal
+  color: #757575
+  font-size: 14px
+
+.table__cell_sorted
+  color: #1846A2
+
+.content-name
+  color: #333333
+  font-size: 16px
+  font-weight: 500
+  margin-bottom: 3px
+  width: 40%
+  display: inline-block
+  vertical-align: top
+
+.content-position
+  color: #000000
+  font-size: 14px
+  width: 60%
+  display: inline-block
+  vertical-align: top
+
+.stage
+  display: flex
+  align-items: center
+  justify-content: space-around
+
+.stage__item
+  display: inline-block
+  color: #333333
+  font-size: 14px
+  font-weight: 300
+  width: 30px
+  text-align: center
+
+.stage__item_selected
+  font-size: 18px
+  font-weight: 500
+  border: 1px solid #FFD200
+  border-radius: 50%
+  padding: 3px 0 2px
+
+.table-other-approver
+  .stage__item:hover
+    cursor: pointer
+    font-size: 18px
+    font-weight: 500
+
+.table-head__text
+  min-height: 40px
+
+.table__body .table__row
+  &:hover
+    background-color: rgba(255, 210, 0, 0.1)
+
+.table-body__checkbox
+  .side-item
+    margin: 0
+  .side-item label:before, .side-item label:after
+    top: 2px
+    left: 10px
+
+.icon-table-sort
+  position: absolute
+  display: block
+  width: 16px
+  height: 16px
+  color: #1846A2
+  bottom: 0
+  right: 0
+
+.table-cell__content
+  cursor: pointer
+  display: inline-block
+  min-width: 50px
+  min-height: 32px
+  position: relative
+
+.directive-wide-table
+  .table-body__text
+    font-size: 14px

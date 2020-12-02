@@ -1,0 +1,1134 @@
+
+.wizard
+  position: absolute
+  top: 30%
+  left: 50%
+  transform: translate(-50%, -30%)
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  border-radius: 5px
+  background-color: #ffffff
+  min-width: 490px
+  height: 90%
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.13)
+
+.form-body
+  flex-grow: 1
+  flex: 1
+  display: flex
+  flex-direction: column
+  overflow-y: auto
+
+.form-title
+  color: #201A00
+  font-size: 24px
+  font-weight: 500
+  margin-bottom: 10px
+  padding: 20px
+  background-color: #ffd200
+  border-bottom: 1px solid #2B323B
+  border-radius: 5px 5px 0 0
+
+.form-buttons
+  width: 490px
+  margin-top: 25px
+  padding: 0 20px
+  overflow-y: auto
+  flex: 1 1 auto // для корректного отображения высоты блока в IE11
+
+.form-label, .prop-name
+  display: block
+  font-size: 12px
+  color: #ACACAC
+  font-weight: 300
+  padding-bottom: 3px
+
+.wizard-element-select-wrapper
+  background: url(./icons/chevron-down.svg) no-repeat
+  background-position-y: center
+  background-position-x: calc(100% - 7px)
+  background-size: 20px
+
+.wizard-element-select
+  appearance: none
+  font-size: 16px
+  width: 100%
+  height: 30px
+  border-width: 0px
+  border-bottom: 1px solid #acacac
+  background-color: transparent
+  font-weight: 500
+  font-family: 'Roboto'
+  padding: 0 !important
+
+  &:focus
+    outline-width: 0px
+    border-bottom: 1px solid #FFD200
+
+.wizard-element-select::-ms-expand
+  display: none
+
+.auto_height
+  height: auto
+
+.form-item
+  margin: 0 0 20px
+
+.wizard-element-button
+  cursor: pointer
+  width: 100%
+  padding: 10px 20px
+  font-size: 16px
+  display: block
+  margin-bottom: 10px
+  background-color: #ffffff
+  border: 1px solid #DADADA
+  border-radius: 5px
+
+  &:hover
+    background-color: rgba(255, 210, 0, 0.1)
+    border: 1px solid #FFD200
+
+  &.selected
+    background-color: #282c34
+    color: aliceblue
+
+  &:focus
+    outline: none
+
+.wizard-element-input
+  font-size: 16px
+  width: 100%
+  border-width: 0px
+  border-bottom: 1px solid #acacac
+  height: 30px
+  font-weight: 500
+  font-family: 'Roboto'
+  padding: 0 !important
+
+  &:focus
+    outline-width: 0px
+    border-bottom: 1px solid #FFD200
+
+.wizard-element-search
+  font-size: 16px
+  width: 380px
+  border: 1px solid #eeeeee
+  height: 40px
+  font-weight: 500
+  font-family: 'Roboto'
+  padding: 10px 40px 11px 15px
+  border-radius: 20px
+
+  &::-webkit-input-placeholder
+    color: #A1A5AD
+    font-weight: 300
+
+  &:-moz-placeholder
+    color: #A1A5AD
+    font-weight: 300
+
+  &::-moz-p
+    color: #A1A5AD
+    font-weight: 300
+
+  &:-ms-input-placeholder
+    color: #A1A5AD
+    font-weight: 300
+
+  &:focus
+    outline-width: 0px
+    border: 1px solid #FFD200
+
+  &:hover
+    border: 1px solid #FFD200
+
+.wizard-element-input-date
+  background-image: url(./icons/calendar.svg)
+  background-repeat: no-repeat
+  background-position-y: center
+  background-position-x: calc( 100% - 2px )
+  background-size: 19px
+
+.file-wrapper
+  margin-top: 5px
+
+.file-button
+  display: inline-block
+  cursor: pointer
+  border: 1px solid #FFD200
+  border-radius: 19px
+  font-size: 14px
+  padding: 7px 14px 6px
+  color: #000000
+  background-color: #ffffff
+  &:hover
+    background-color: #fffbe6
+  &:focus
+    outline: none
+
+.wizard-element-input-file
+  opacity: 0
+  &:focus
+    outline: none
+
+.file-info
+  position: relative
+  margin-top: 5px
+  font-family: 'Roboto'
+  font-size: 14px
+  font-weight: 300
+
+.file-info-link
+  color: #000000
+  padding-right: 3px
+  &:hover
+    opacity: 0.7
+
+.question-group
+  flex-grow: 1
+  overflow-y: auto
+  position: relative
+  width: 990px
+
+.question-group-block
+  position: absolute
+  width: 100%
+  height: 100%
+
+.question-group-content
+  margin-top: 20px
+  &:first-child
+    margin-top: 0
+
+.question-group-title
+  margin-top: 10px
+  margin-bottom: 10px
+  font-size: 16px
+  color: #000000
+  padding: 11px 20px 10px
+  background-color: #eeeeee
+  max-width: 990px // IE
+
+.question-group-title-type2
+  margin: 20px 18px 5px
+  font-size: 16px
+  color: #000000
+  font-weight: 500
+  padding: 10px
+  border: 1px solid #FFD200
+  border-radius: 5px
+
+.question-editor-title
+  max-width: 990px
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.question-editor-title-block
+  width: 100%
+  margin: 0 20px
+  padding: 7px 10px
+  font-size: 16px
+  font-weight: 500
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.13)
+  border: 1px solid #DADADA
+  border-radius: 5px
+
+.question-editor-title-vote
+  width: 100%
+
+.voting
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+  border: 1px solid #DADADA
+  border-radius: 5px
+  margin-right: 20px
+
+.vote-button
+  width: 33%
+  height: 100%
+  display: inline-block
+  cursor: pointer
+  border-width: 1px
+  border-radius: 4px
+  border-style: solid
+  border-color: #ffffff
+  background-color: #ffffff
+  color: #333333
+  font-size: 14px
+  font-family: "Roboto"
+  padding: 6px 0 5px
+  &:hover
+    border-color: #929292
+  &:focus
+    outline: none
+  &-favour
+    border-color: rgb(108, 217, 148)
+    background: url(./icons/vote-favour.svg) no-repeat 40px center
+    background-size: 18px
+    background-color: rgba(108, 217, 148, 0.1)
+    &:hover
+      border-color: #6cd994
+  &-against
+    border-color: rgb(255, 131, 115)
+    background: url(./icons/vote-against.svg) no-repeat 25px center
+    background-size: 18px
+    background-color: rgba(255, 131, 115, 0.1)
+    &:hover
+      border-color: #FF8373
+  &-abstained
+    border-color: rgb(255, 210, 0)
+    background-color: rgba(255, 210, 0, 0.1)
+    &:hover
+      border-color: #FFD200
+
+.navButtons
+  text-align: right
+  padding: 20px
+  min-height: 1% // баг IE, который сопровождался прыгающим позиционированием кнопок навигации
+  display: flex
+  justify-content: inherit
+
+  &-right
+    justify-content: flex-end
+
+.button
+  cursor: pointer
+  font-size: 16px
+  margin-left: 20px
+  padding: 10px 20px 9px
+  color: #201a00
+  border: 1px solid #acacac
+  border-radius: 20px
+  background-color: #fff
+
+  &:focus
+    outline: none
+  &:hover
+    background-color: rgba(255, 210, 0, 0.1)
+
+  &.disabled
+    background-color: #EEEEEE
+    border: 1px solid #EEEEEE
+    color: #ACACAC
+    cursor: auto
+    .icon-arrow-right
+      color: #ACACAC
+  &.hidden
+    visibility: hidden
+
+.button-add
+  cursor: pointer
+  border: 1px solid #FFD200
+  border-radius: 19px
+  font-size: 14px
+  position: relative
+  margin-top: 10px
+  padding: 7px 14px 6px 30px
+  color: #000000
+  background-color: #ffffff
+
+  &:hover
+    background-color: rgba(255, 210, 0, 0.1)
+
+  &:focus
+    outline: none
+
+.button-follow
+  position: relative
+  color: #201A00
+  padding: 10px 50px 9px 20px
+  background-color: #FFD200
+  border-color: #FFD200
+  .icon-arrow-right
+    position: absolute
+    top: 50%
+    right: 20px
+    transform: translateY(-50%)
+    display: block
+    width: 24px
+    height: 24px
+    color: #201A00
+
+.icon-add
+  position: absolute
+  width: 18px
+  height: 18px
+  top: 50%
+  left: 10px
+  transform: translateY(-50%)
+  color: #000000
+
+.question-body
+  padding: 10px
+  overflow-y: scroll
+
+.question-body-wide
+  width: 990px
+
+.question-content
+  width: 990px
+  flex-grow: 1
+  display: flex
+  overflow-y: auto
+  &.question-group-body
+    width: 100%
+
+.question-group-item
+  position: relative
+
+  .icon-close, .icon-add
+    visibility: hidden
+
+  .icon-add
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: calc(100% - 48px)
+    width: 22px
+    height: 22px
+    color: #000000
+
+  &:hover
+    .question-title
+      background-color: rgba(255, 210, 0, 0.1)
+    .icon-close, .icon-add
+      visibility: visible
+
+.pointer
+  cursor: pointer
+
+.question-title
+  font-size: 16px
+  color: #000000
+  margin: 0 20px
+  padding: 11px 30px 10px 10px
+  border-bottom: 1px solid #dadada
+
+.question-text-wrapper
+  width: 50%
+  height: 100%
+  padding: 10px 10px 10px 20px
+  overflow-y: auto
+
+  .question-group-item .icon-add
+    left: calc(100% - 23px)
+
+  .question-group-body
+    width: 100%
+
+  .question-group-title-type2
+    margin: 20px 0 5px
+
+  .question-title
+    margin: 0
+    padding: 11px 10px 10px
+
+  .question-text
+    position: relative
+    padding: 10px
+    &:hover
+      background-color: rgba(255, 210, 0, 0.1)
+
+.question-text
+  color: #000000
+  font-size: 16px
+  border-bottom: 1px solid #dadada
+  padding: 0 10px 10px
+
+.question-list
+  display: block
+  margin: 10px 0
+  padding: 0
+  list-style: none
+  .question-list-item
+    display: flex
+    &:before
+      content: '-'
+      padding-right: 3px
+
+.question-list-ul
+  list-style-type: disc
+  margin: 15px 0 0 30px
+  color: #000000
+
+.question-list-ul-item // костыль для удаления отступов у вложенных списков
+  .question-list-ul
+    list-style: none
+    margin: 0
+
+.question-list-ul-item
+  margin-bottom: 15px
+  &:last-child
+    margin-bottom: 0
+
+.param-list
+  display: block
+  margin: 10px 0 10px 20px
+  padding: 0
+
+.param-list-item
+  position: relative
+
+  &-custom
+    display: flex
+    align-items: center
+    &:first-child
+      .prop-name
+        color: #333333
+    &::before
+      content: ''
+      position: absolute
+      width: 1px
+      height: 69%
+      top: 11px
+      left: 11px
+      background-color: #757575
+  .prop-row
+    padding: 10px 0 10px 10px
+    width: 100%
+
+.question-list-item
+  display: block
+  margin-bottom: 3px
+  color: #000000
+  font-size: 14px
+  font-weight: 300
+
+.question-params
+  font-style: italic
+  color: #9e9e9e
+
+.question-params-list
+  width: 50%
+  height: 100%
+  overflow-y: auto
+
+.prop-row
+  padding: 10px 20px
+
+.question-prop-text
+  font-style: italic
+  color: #9e9e9e
+  &-highlighted
+    background-color: rgba(255, 210, 0, 0.5)
+    font-style: normal
+    font-weight: 700
+    color: #000000
+
+.prop-text
+  font-size: 18px
+  font-weight: 500
+  color: #333333
+
+.main-question .question-title.linked
+  padding-left: 20px
+  font-weight: normal
+
+.icon-close
+  cursor: pointer
+
+  &-group
+    right: 27px
+
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 18px
+    height: 18px
+    color: #000000
+
+  &-questions
+    right: 0px
+
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 18px
+    height: 18px
+    color: #000000
+
+  &-list
+    right: 0px
+    z-index: 1
+
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 18px
+    height: 18px
+    color: #000000
+
+.question-navbar-block
+  display: flex
+  justify-content: stretch
+  margin: 0 10px
+
+.question-navbar-block-item
+  flex: 1
+  margin: 5px 10px 0
+
+.question-navbar
+  margin-top: 5px
+
+  &-wide
+    position: relative
+    display: flex
+    justify-content: space-between
+    &::after
+      content: ''
+      position: absolute
+      z-index: 1
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+      display: inline-block
+      width: 100%
+      height: 3px
+      background-color: rgba(255, 208, 0, 0.25)
+
+    .question-navbar-item
+      margin-right: 0
+      z-index: 2
+      &::after
+        display: none
+
+.question-navbar-item
+  cursor: pointer
+  display: inline-block
+  position: relative
+  width: 28px
+  height: 28px
+  background-color: #ffffff
+  border-radius: 50%
+  border: 1px solid #FFD200
+
+  margin-right: 90px
+
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 28px
+    transform: translateY(-50%)
+    display: inline-block
+    width: 90px
+    height: 3px
+    background-color: rgba(255, 208, 0, 0.25)
+
+  &:last-child
+    margin-right: 0
+    &::after
+      display: none
+
+  &:hover
+    background-color: #fff6cc
+
+  &-current
+    background-color: #FFD200
+
+.question-navbar-count
+  position: absolute
+  font-size: 14px
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.loading
+  position: absolute
+  width: 200px
+  height: 200px
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background: url(./loading.gif) no-repeat center
+
+.icon-date
+  display: inline-block
+  width: 24px
+  height: 24px
+  color: #DADADA
+.react-calendar
+  width: 100%
+  max-width: 100%
+  background: white
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.13)
+  border: 1px solid #DADADA
+  border-radius: 5px
+  font-family: 'Roboto' !important
+  line-height: 1.125em
+
+.react-calendar__tile
+  padding: 8px
+.grey-dot
+  border-radius: 50%
+  background: #dadada
+  text-align: center
+  width: 1.5em
+  height: 1.5em
+  display: inline-block
+  padding: 0.2em
+.wizard-element-datepicker
+  font-family: "Roboto" !important
+  width: 100%
+
+  .react-calendar__tile--active
+    background: #000
+    color: white
+    font-size: 16px !important
+
+  input
+    outline-width: 0px
+
+  .react-date-picker__inputGroup__leadingZero
+    padding-bottom: 1px
+
+  .react-date-picker__wrapper
+    border-bottom: 1px solid #acacac
+    border-width: 0 0 1px 0
+
+  .react-date-picker__inputGroup
+    font-size: 16px
+    width: 100%
+    border-width: 0px
+    height: 30px
+    font-weight: 500
+    font-family: 'Roboto' !important
+    padding: 0 !important
+
+.react-date-picker--open
+  .react-date-picker__wrapper
+    border-bottom: 1px solid #FFD200
+.icon-switch
+  cursor: pointer
+  display: inline-block
+  width: 24px
+  height: 24px
+  color: #DADADA
+  &:hover
+    color: #FFD200
+
+.icon
+  cursor: pointer
+  display: inline-block
+  width: 24px
+  height: 24px
+  color: #000000
+
+.icon-menu
+  color: #757575
+  width: 30px
+  height: 30px
+  padding: 4px
+  background-color: #ffffff
+  border-radius: 50%
+  &:hover
+    background-color: #EEEEEE
+  &-active
+    background-color: #EEEEEE
+
+.switch-block
+  position: relative
+  border: 1px solid #DADADA
+  border-radius: 5px
+  padding: 5px 10px 0
+  .prop-row
+    padding: 5px 0 10px
+  .prop-value
+    color: #333333
+    font-size: 18px
+    font-weight: 500
+  .icon-switch
+    position: absolute
+    right: 5px
+    top: 5px
+
+.button-dropdown
+  cursor: pointer
+  border: 1px solid #FFD200
+  border-radius: 19px
+  font-size: 16px
+  position: relative
+  margin-top: 10px
+  width: 100%
+  padding: 10px 20px 9px
+  color: #000000
+  background-color: #ffffff
+  text-align: left
+  font-family: 'Roboto'
+
+  &:hover
+    background-color: rgba(255, 210, 0, 0.1)
+
+  &:focus
+    outline: none
+
+.button-dropdown-type2
+  cursor: pointer
+  border: 1px solid #dadada
+  border-radius: 5px
+  font-size: 12px
+  position: relative
+  margin-top: 10px
+  width: 100%
+  padding: 10px 10px 9px
+  color: #333333
+  background-color: #ffffff
+  text-align: left
+  font-family: 'Roboto'
+
+  &:hover
+    border: 1px solid #FFD200
+    .icon
+      color: #FFD200
+
+  &:focus
+    outline: none
+
+  .icon
+    color: #DADADA
+
+.subject
+  .param-list
+    margin: 0
+
+.button-dropdown .icon, .button-dropdown-type2 .icon
+  position: absolute
+  top: 50%
+  right: 10px
+  transform: translateY(-50%)
+
+.navigation-small
+  display: flex
+  justify-content: space-between
+  margin: 10px 0
+
+.button-back
+  cursor: pointer
+  font-family: "Roboto"
+  color: #000000
+  font-size: 16px
+  background: none
+  border: none
+  padding: 5px 0 5px 25px
+  position: relative
+  .icon-back
+    position: absolute
+    width: 20px
+    height: 20px
+    display: inline-block
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+  &:hover
+    color: #FFD200
+
+.button-ok
+  cursor: pointer
+  font-family: "Roboto"
+  color: #201A00
+  font-size: 16px
+  background-color: #FFD200
+  border: 1px solid #FFD200
+  border-radius: 20px
+  padding: 6px 17px
+  &:hover
+    background-color: rgba(255, 210, 0, 0.1)
+
+.side-title
+  position: relative
+  font-weight: 500
+  font-size: 16px
+  padding: 11px 15px
+  border: 1px solid #FFD200
+  border-radius: 5px 5px 0 0
+
+.side-items
+  list-style: none
+  margin: 0
+  padding: 11px 15px
+  border-width: 0px 1px 1px
+  border-style: solid
+  border-color: #dadada
+  border-radius: 0 0 5px 5px
+
+// checkboxes
+
+$side-item-checked-color: #FFD200
+$side-item-border-color: #DADADA
+$side-item-border-color-disabled: #DADADA
+$side-item-checked-color-disabled: #DADADA
+
+$side-item-margin: 5px 0
+$side-item-size: 15px
+$side-item-padding: 9px
+$side-item-border-width: 0px
+$side-item-border-radius: 50%
+$md-checkmark-width: 2px
+$md-checkmark-color: #fff
+$side-item-label-padding: 9px
+
+.side-item, .checkbox
+  position: relative
+  margin: $side-item-margin
+  text-align: left
+
+  &-inline &
+    display: inline-block
+
+  label
+    cursor: pointer
+    display: inline
+    line-height: $side-item-size
+    vertical-align: top
+    clear: both
+    padding-left: 1px
+    &:not(:empty)
+      padding-left: $side-item-label-padding
+
+    &:before, &:after
+      content: ""
+      position: absolute
+      left: 0
+      top: -1px
+
+    &:before
+      // box
+      width: $side-item-size
+      height: $side-item-size
+      background: #dadada
+      border: $side-item-border-width solid $side-item-border-color
+      border-radius: $side-item-border-radius
+      cursor: pointer
+
+    &:after
+      // checkmark
+
+  input[type="checkbox"], input[type="radio"]
+    outline: 0
+    visibility: hidden
+    width: $side-item-size
+    margin: 0
+    display: block
+    float: left
+    font-size: inherit
+
+    &:checked
+      + label:before
+        background: $side-item-checked-color
+        border: none
+
+      + label:after
+
+        $md-checkmark-size: 7px
+
+        transform: translate(3px, 4px) rotate(-45deg)
+        width: 7px
+        height: 3px
+
+        border: $md-checkmark-width solid $md-checkmark-color
+        border-top-style: none
+        border-right-style: none
+
+    &:disabled
+      + label:before
+        border-color: $side-item-border-color-disabled
+
+      &:checked
+        + label:before
+          background: $side-item-checked-color-disabled
+
+  input[type="radio"]
+    & + label:before
+      width: 14px
+      height: 14px
+      border: 1px solid #000000
+      background-color: #ffffff
+
+    &:checked
+      + label:before
+        border: 1px solid #000000
+        background-color: $side-item-checked-color
+
+      + label:after
+        width: 10px
+        height: 10px
+        border: none
+        border-radius: 50%
+        transform: none
+
+.subject-block
+  position: relative
+  top: 0
+  width: 455px
+  background-color: #fff
+  height: 100%
+  z-index: 2
+
+.counter
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  display: inline-block
+  font-size: 12px
+  text-align: center
+  color: #333333
+  width: 23px
+  height: 22px
+  line-height: 23px
+  background-color: #eeeeee
+  border-radius: 50%
+  margin-left: 10px
+
+.counter-list
+  position: relative
+  display: inline-block
+  font-size: 12px
+  text-align: center
+  color: #333333
+  border: 1px solid #757575
+  width: 23px
+  padding: 3px 0
+  background-color: #ffffff
+  border-radius: 50%
+
+.menu
+  display: flex
+  align-items: center
+  justify-content: flex-end
+
+.footnote
+  color: #333333
+  font-size: 12px
+  font-weight: 300
+  padding: 10px 20px
+
+.menu
+  position: relative
+
+.menu__items
+  position: absolute
+  top: 30px
+  right: 0
+  display: inline-block
+  padding: 10px
+  background-color: #ffffff
+  border: 1px solid #E2E2E2
+  border-radius: 4px
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.24)
+  z-index: 2
+
+.menu__item
+  cursor: pointer
+  color: #000000
+  font-size: 14px
+
+.input-agent
+  margin: 0 20px
+
+.input-agent-label
+  font-size: 14px
+  vertical-align: bottom !important
+
+  &::before
+    top: 6px !important
+  &::after
+    top: 6px !important
+
+.sort-buttons
+  position: absolute
+  left: 10px
+  width: 11px
+  height: 44px
+
+.icon-sort
+  cursor: pointer
+  position: absolute
+
+  width: 11px
+  height: 9px
+  display: inline-block
+  color: #acacac
+
+  &-up
+    top: 10px
+    background: url(./icons/sort-up.svg) no-repeat center
+
+  &-down
+    bottom: 10px
+    background: url(./icons/sort-down.svg) no-repeat center
+
+  &:hover
+    opacity: 0.7
+
+.select-row
+  width: 40%
+  display: flex
+  align-items: center
+  margin: 10px 20px
+
+  .form-label
+    color: #000000
+    font-size: 16px
+    font-weight: 500
+    margin-right: 15px
+
+  .button-add
+    margin-top: 0
+
+  .wizard-element-select-wrapper
+    width: 400px
+    margin-right: 15px
+
+  .wizard-element-input
+    width: 400px
+
+.multiselect-option
+  cursor: pointer
+
+  &.selected
+    background: yellow
+
+.approvers-group-name
+  color: #333333
+  font-size: 12px
+  font-weight: 300
+  font-style: italic
+
+.collapser
+  ol.param-list-margin
+    margin-left: 15px
+    .button-add
+      margin-left: -15px
+
+.preloader
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  position: absolute
+  top: 0px
+  bottom: 0px
+  left: 0px
+  right: 0px
+  z-index: 999
+  color: #fff
+  background-color: rgba(255, 255, 255, 0.7)
+  overflow: auto
+
+  .loading
+    position: absolute
+    width: 200px
+    height: 200px
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background: url(./preloader.gif) no-repeat center
+
+.link
+  font-size: 14px
+  color: #1846A2
+  font-family: "Roboto"

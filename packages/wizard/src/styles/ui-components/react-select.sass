@@ -1,0 +1,66 @@
+.react-select-container
+  position: relative
+  width: 100%
+
+  &:focus
+    outline: none
+
+  .has-hint
+    margin-bottom: 40px
+
+  .react-select__control
+    cursor: pointer
+    font-size: 16px
+    width: 100%
+    height: 30px
+    border: 1px solid #dadada
+    border-radius: 5px
+    background-color: transparent
+    font-weight: 500
+    font-family: 'Roboto'
+    box-shadow: none
+
+    &:hover
+      border-color: #FFD200
+      box-shadow: none
+    &:focus
+      outline: none
+      box-shadow: none
+
+    &--is-focused
+      border: 1px solid #FFD200
+      box-shadow: none
+
+  .react-select__value-container
+    padding: 0 10px
+
+  .react-select__menu
+    margin-top: 0
+
+.react-select__option
+  cursor: pointer
+  color: #333333
+  font-size: 16px
+  font-weight: normal
+
+  &:hover
+    background-color: rgba(255, 210, 0, 0.1)
+
+  &--is-focused
+    background-color: rgba(255, 210, 0, 0.1) !important
+
+.react-select-container.hidden-disabled-options
+  .react-select__option--is-disabled
+    display: none
+
+.react-select-menu-hint
+  display: block
+  padding: 10px
+  background-color: #ffffff
+  border-top: 1px solid #d1d1d1
+  z-index: 999
+
+.react-select--is-disabled
+  background-color: #fafafa
+  .react-select__placeholder
+    display: none !important

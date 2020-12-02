@@ -1,0 +1,45 @@
+/**
+ * Стили компонента Collapser 
+ */
+
+.collapser
+  margin-top: 10px
+  border: 1px solid #DADADA
+  border-radius: 5px
+
+  &__title
+    cursor: pointer
+    position: relative
+    padding: 11px 15px
+    font-size: 16px
+    font-weight: 500
+    background-color: #f8f8f8
+    border-radius: 5px
+
+  &__content
+    position: relative
+    padding: 11px 15px
+    padding-bottom: 15px
+    border-top: 1px solid #DADADA
+
+    .icon-close-list
+      top: 15px
+      right: 13px
+
+    &_hidden
+      display: none
+
+  .icon
+    position: absolute
+    top: 50%
+    right: 10px
+    transform: translateY(-50%)
+    color: #ACACAC
+
+.collapser__content
+  .prop-row
+    padding: 11px 0
+  .prop-name
+    color: #000000
+  .wizard-element-select-wrapper
+    margin-top: 10px
